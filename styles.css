@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: #10af13;
+  color: #fff;
+  padding: 16px; /* 1em setara dengan 16px */
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Memastikan semua item sejajar secara vertikal */
+  padding: 16px 32px; /* 1em 2em setara dengan 16px 32px */
+}
+
+header h1 {
+  font-size: 24px; /* 1.5em setara dengan 24px */
+  color: #fff;
+  margin-right: auto; /* Memastikan judul berada di sebelah kiri */
+}
+
+header nav {
+  display: flex;
+  align-items: center; /* Menyelaraskan item di navbar secara vertikal */
+  gap: 16px; /* Jarak antar link */
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px; /* 1em setara dengan 16px */
+}
+
+header nav a:hover {
+  color: #ddd;
+}
+
+button {
+  background-color: #10af13;
+  color: #fff;
+  border: none;
+  padding: 8px 16px; /* 0.5em 1em setara dengan 8px 16px */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+main {
+  flex: 1;
+  padding: 32px; /* 2em setara dengan 32px */
+}
+
+section p{
+  color: #13af10;
+  font-size: 1.2em;
+}
+
+footer {
+  text-align: center;
+  padding: 8px; /* 0.5em setara dengan 8px */
+}
+
+.img-container {
+  display: flex;
+  float: right;
+  width: 700px;
+  height: 700px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tambahan untuk styling grid produk */
+#product-list {
+  display: flex;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Membuat grid dengan kolom yang responsif */
+  gap: 16px; /* Jarak antar kotak produk */
+}
+
+.product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px; /* 1em setara dengan 16px */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+#product-img {
+  width: 350px;
+  height: 200px;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.404);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+  width: 250px;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+}
+.modal h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.modal span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+} 
+
+.buy-button {
+  background-color: #10af13; /* Warna biru */
+  color: #fff;
+  border: none;
+  padding: 8px 16px; /* 0.5em 1em setara dengan 8px 16px */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 10px; /* 10px */
+}
+
+.buy-button:hover {
+  background-color: #218838; /* Warna biru lebih gelap */
+}
+
+
+.model-container {
+  display: flex;
+  gap: 20px; /* Adjust gap between items */
+  align-items: center; /* Vertical alignment */
+  justify-content: center; /* Horizontal spacing */
+  width: 85%; /* Ensure container takes full width */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.modal-container img{
+  width: 50%;
+  height: 50%;
+  float: right;
+}
+
+.model-container~button { 
+  margin-left: 15%;
+}
+
+.about-container {
+  display: flex;
+  background-color: #10af13;
+  gap: 20px; /* Adjust gap between items */
+  align-items: center; /* Vertical alignment */
+  justify-content: center; /* Horizontal spacing */
+  width: 95%; /* Ensure container takes full width */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.about-container p{
+  color: #fff;
+  font-size: 1em;
+  padding: 80px;
+}
+
+
+.about-container img{
+  width: 50%;
+  height: 50%;
+  float: left;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-jumbotron {
+  background-color: #f5f5f5; /* Warna latar belakang jumbotron */
+  padding: 32px; /* 2em setara dengan 32px */
+  margin-bottom: 32px; /* Jarak bawah jumbotron */
+  text-align: center; /* Rata tengah untuk teks */
+  border-radius: 8px; /* Sudut membulat */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+}
+
+
+.about-jumbotron h2 {
+  font-size: 32px; /* Ukuran font judul */
+  margin-bottom: 16px; /* Jarak bawah judul */
+  color: #333; /* Warna teks */
+}
+
+.about-jumbotron p {
+  font-size: 18px; /* Ukuran font untuk paragraf */
+  color: #555; /* Warna teks untuk paragraf */
+}
+
+.jumbotron {
+  background-color: #f5f5f5; /* Warna latar belakang jumbotron */
+  padding: 32px; /* 2em setara dengan 32px */
+  margin-bottom: 32px; /* Jarak bawah jumbotron */
+  text-align: center; /* Rata tengah untuk teks */
+  border-radius: 8px; /* Sudut membulat */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+}
+
+
+.jumbotron h2 {
+  font-size: 32px; /* Ukuran font judul */
+  margin-bottom: 16px; /* Jarak bawah judul */
+  color: #333; /* Warna teks */
+}
+
+.jumbotron p {
+  font-size: 18px; /* Ukuran font untuk paragraf */
+  color: #555; /* Warna teks untuk paragraf */
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Jarak antar elemen */
+}
+
+.contact-info label {
+  font-weight: bold;
+}
+
+.contact-info input {
+  padding: 8px; /* Ruang di dalam input */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.change-password {
+  margin-top: 20px; /* Jarak atas untuk bagian ubah kata sandi */
+}
+
+.change-password h3 {
+  margin-bottom: 10px; /* Jarak bawah untuk judul */
+}
+
+.save-button {
+  margin-top: 10px; /* Jarak atas untuk tombol simpan */
+  background-color: #10af13; /* Warna biru */
+  color: #fff;
+  padding: 8px 16px; /* 0.5em 1em setara dengan 8px 16px */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.save-button:hover {
+  background-color: #218838; /* Warna biru lebih gelap */
+}
+.payment-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order-summary {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+
+.order-summary h3 {
+  margin-bottom: 10px;
+}
+
+.payment-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.payment-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pay-button {
+  width: 100%;
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pay-button:hover {
+  background-color: #218838;
+}
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s;
+}
+
+.cart-item:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  width: 150px;
+  height: 80px;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.cart-item-details p {
+  font-size: 14px;
+  color: #666;
+}
+
+.cart-item-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+
+
+#total-price {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+}
+
+#checkout-button {
+  background-color: #13af10;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  transition: background-color 0.3s;
+}
+
+#checkout-button:hover {
+  background-color: #218838;
+}

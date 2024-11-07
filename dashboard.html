@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - MyStore</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 onclick="window.location.href='index.html'">Timedoor Store</h1>
+    <nav>
+      <a href="dashboard.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section style="margin-bottom: 32px;">
+      <div class="jumbotron">
+        <h2>Welcome to Our Store</h2>
+        <p>Explore our wide range of products. Click on a product to view details!</p>
+      </div>
+      <div class="model-container">
+        <p>Selamat datang di Timedoor Store, toko fashion yang dirancang khusus untuk para pecinta coding dan teknologi! Kami menghadirkan kaos 100% katun berkualitas tinggi yang nyaman, tahan lama, dan ramah kulit, sempurna untuk menemani aktivitas sehari-hari Anda. Bagi Anda yang bangga menjadi bagian dari dunia digital atau sekadar tertarik dengan nuansa unik dari dunia pemrograman, koleksi kami adalah pilihan tepat untuk menunjukkan identitas dan passion Anda <br> <br>
+          Jangan lewatkan kesempatan untuk memiliki kaos terbaik yang menyatukan fashion dan teknologi hanya di Timedoor Store. Dapatkan kaos favorit Anda hari ini, dan jadilah bagian dari komunitas yang menyatu dalam kreativitas dan inovasi!
+        </p>
+        <img src="assets/jumbotron/Desain tanpa judul.png" alt="Model Image">
+      </div>
+      <button onclick="window.location.href='about.html'" style="margin-left: 8%;">Learn More</button>
+    </section>
+    <section>
+      <h2>Products</h2>
+    <div id="product-list">
+      <div class="product" onclick="goToProductDetail(1)">
+        <img src="assets/images/product-1.png" alt="Product Image">
+        <p>Product 1 - $10</p>
+        <button class="buy-button" onclick="addToCart(1, 'Product 1', 10); event.stopPropagation();">Buy Me</button>
+      </div>
+      <div class="product" onclick="goToProductDetail(2)">
+        <img src="assets/images/product-2.png" alt="Product Image">
+        <p>Product 2 - $20</p>
+        <button class="buy-button" onclick="addToCart(2, 'Product 2', 20); event.stopPropagation();">Buy Me</button>
+      </div>
+      <div class="product" onclick="goToProductDetail(3)">
+        <img src="assets/images/product-3.png" alt="Product Image">
+        <p>Product 3 - $30</p>
+        <button class="buy-button" onclick="addToCart(3, 'Product 3', 30); event.stopPropagation();">Buy Me</button>
+      </div>
+      <div class="product" onclick="goToProductDetail(4)">
+        <img src="assets/images/product-4.png" alt="Product Image">
+        <p>Product 4 - $40</p>
+        <button class="buy-button" onclick="addToCart(4, 'Product 4', 40); event.stopPropagation();">Buy Me</button>
+      </div>
+      <div class="product" onclick="goToProductDetail(5)">
+        <img src="assets/images/product-5.png" alt="Product Image">
+        <p>Product 5 - $50</p>
+        <button class="buy-button" onclick="addToCart(5, 'Product 5', 50); event.stopPropagation();">Buy Me</button>
+      </div>
+      <div class="product" onclick="goToProductDetail(6)">
+        <img src="assets/images/product-6.png" alt="Product Image">
+        <p>Product 6 - $60</p>
+        <button class="buy-button" onclick="addToCart(6, 'Product 6', 60); event.stopPropagation();">Buy Me</button>
+      </div>
+      <!-- Add more products if needed -->
+    </div>
+  </section>
+    <div class="modal-container">
+      <div class="modal">
+        <h3>This is Modal</h3>
+        <span onclick="hideModal()">x</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Timedoor Store. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
