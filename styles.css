@@ -68,7 +68,7 @@ main {
 
 section p{
   color: #13af10;
-  font-size: 1.2em;
+  font-size: 0.9em;
 }
 
 footer {
@@ -182,9 +182,9 @@ footer {
   margin-bottom: 32px;
 }
 
-.modal-container img{
-  width: 50%;
-  height: 50%;
+.model-container img{
+  width: 30%;
+  height: 30%;
   float: right;
 }
 
@@ -195,7 +195,7 @@ footer {
 .about-container {
   display: flex;
   background-color: #10af13;
-  gap: 20px; /* Adjust gap between items */
+  gap: 10px; /* Adjust gap between items */
   align-items: center; /* Vertical alignment */
   justify-content: center; /* Horizontal spacing */
   width: 95%; /* Ensure container takes full width */
@@ -207,7 +207,7 @@ footer {
 .about-container p{
   color: #fff;
   font-size: 1em;
-  padding: 80px;
+  padding-right: 30px;
 }
 
 
