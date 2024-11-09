@@ -123,11 +123,11 @@ document.getElementById('checkout-button')?.addEventListener('click', () => {
 
 // Load cart items when the page loads (cart.html)
 document.addEventListener('DOMContentLoaded', () => {
-    // if (window.location.pathname.includes('cart.html')) {
-    //     loadCartItems();
-    // }
+    if (window.location.pathname.includes('cart')) {
+        loadCartItems();
+    }
 
-    loadCartItems();
+    // loadCartItems();
 
     if (window.location.pathname.includes('product-detail.html')) {
         loadProductDetail();
