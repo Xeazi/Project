@@ -59,6 +59,8 @@ function addToCart(id, name, price) {
 
 // Function to load and display cart items
 function loadCartItems() {
+    console.log('load cart items');
+    
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartContainer = document.getElementById('cart-container');
     console.log(cart);
@@ -121,9 +123,11 @@ document.getElementById('checkout-button')?.addEventListener('click', () => {
 
 // Load cart items when the page loads (cart.html)
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.location.pathname.includes('cart.html')) {
-        loadCartItems();
-    }
+    // if (window.location.pathname.includes('cart.html')) {
+    //     loadCartItems();
+    // }
+
+    loadCartItems();
 
     if (window.location.pathname.includes('product-detail.html')) {
         loadProductDetail();
