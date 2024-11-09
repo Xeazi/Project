@@ -53,6 +53,7 @@ function addToCart(id, name, price) {
     cart.push({ id, name, price, img: imagePath}); // Add image placeholder
     localStorage.setItem('cart', JSON.stringify(cart));   
     showModal(`${name} has been added to cart!`);
+    console.log('ketambah cakk')
 }
 
 
@@ -60,6 +61,8 @@ function addToCart(id, name, price) {
 function loadCartItems() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartContainer = document.getElementById('cart-container');
+    console.log(cart);
+    
     cartContainer.innerHTML = '';
 
     cart.forEach((item, index) => {
