@@ -18,6 +18,12 @@ header, footer {
   text-align: center;
 }
 
+footer {
+  text-align: center;
+  padding: 8px; /* 0.5em setara dengan 8px */
+}
+
+
 header {
   display: flex;
   justify-content: space-between;
@@ -71,10 +77,6 @@ section p{
   font-size: 0.9em;
 }
 
-footer {
-  text-align: center;
-  padding: 8px; /* 0.5em setara dengan 8px */
-}
 
 #landing-page{
   display: flex;
@@ -199,7 +201,7 @@ footer {
   margin-bottom: 32px;
 }
 
-.model-container img{
+.model-container img {
   width: 30%;
   height: 30%;
   float: right;
