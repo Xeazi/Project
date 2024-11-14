@@ -127,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loadCartItems();
     }
 
-    // loadCartItems();
 
     if (window.location.pathname.includes('product-detail.html')) {
         loadProductDetail();
