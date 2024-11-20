@@ -178,10 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle form submission (simulating payment processing)
         document.querySelector('.payment-form').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Payment Successful! Thank you for your purchase.');
+            showModal('Payment processing...');
+            setTimeout(() => {
             localStorage.removeItem('selectedItems'); // Clear selected items after purchase
             localStorage.removeItem('cart'); // Clear the entire cart after purchase
             window.location.href = 'index.html'; // Redirect to home or shop page
+            } , 2000); // Simulate a 2-second payment processing delay
         });
     }
 });
